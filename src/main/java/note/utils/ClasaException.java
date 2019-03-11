@@ -1,4 +1,4 @@
-package note.main;
+package note.utils;
 
 public class ClasaException extends Exception{
 	
