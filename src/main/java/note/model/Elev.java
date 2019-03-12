@@ -1,37 +1,33 @@
 package note.model;
 
 public class Elev {
-    private int nrmatricol;
-    private String nume;
-    private int idClasa;
+	private int nrmatricol;
+	private String nume;
+	
+	public Elev(int nrmatricol, String nume) {
+		this.setNrmatricol(nrmatricol);
+		this.setNume(nume);
+	}
 
-    public Elev(int nrmatricol, String nume, int idClasa) {
-        this.nrmatricol = nrmatricol;
-        this.nume = nume;
-        this.idClasa = idClasa;
-    }
+	public int getNrmatricol() {
+		return nrmatricol;
+	}
 
-    public int getNrmatricol() {
-        return nrmatricol;
-    }
+	public void setNrmatricol(int nrmatricol) {
+		this.nrmatricol = nrmatricol;
+	}
 
-    public void setNrmatricol(int nrmatricol) {
-        this.nrmatricol = nrmatricol;
-    }
+	public String getNume() {
+		return nume;
+	}
 
-    public String getNume() {
-        return nume;
-    }
-
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
-
-    public int getIdClasa() {
-        return idClasa;
-    }
-
-    public void setIdClasa(int idClasa) {
-        this.idClasa = idClasa;
-    }
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+	
+	
+	public String toString() {
+		return this.nrmatricol + " " + this.nume;
+	}
+	
 }

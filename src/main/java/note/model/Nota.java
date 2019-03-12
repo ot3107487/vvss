@@ -1,38 +1,58 @@
 package note.model;
 
 public class Nota {
+	
+	private double nrmatricol;
+	private String materie;
+	private double nota;
+	
+	public Nota(double nrmatricol, String materie, double nota) {
+		this.setNrmatricol(nrmatricol);
+		this.setMaterie(materie);
+		this.setNota(nota);
+	}
 
-    private int nrmatricol;
-    private Materie materie;
-    private int nota;
+	/**
+	 * @return the nrmatricol
+	 */
+	public double getNrmatricol() {
+		return nrmatricol;
+	}
 
-    public Nota(int nrmatricol, Materie materie, int nota) {
-        this.nrmatricol = nrmatricol;
-        this.materie = materie;
-        this.nota = nota;
-    }
+	/**
+	 * @param nrmatricol the nrmatricol to set
+	 */
+	public void setNrmatricol(double nrmatricol) {
+		this.nrmatricol = nrmatricol;
+	}
 
-    public int getNrmatricol() {
-        return nrmatricol;
-    }
+	/**
+	 * @return the materie
+	 */
+	public String getMaterie() {
+		return materie;
+	}
 
-    public void setNrmatricol(int nrmatricol) {
-        this.nrmatricol = nrmatricol;
-    }
+	/**
+	 * @param materie the materie to set
+	 */
+	public void setMaterie(String materie) {
+		this.materie = materie;
+	}
 
-    public Materie getMaterie() {
-        return materie;
-    }
+	/**
+	 * @return the nota
+	 */
+	public double getNota() {
+		return nota;
+	}
 
-    public void setMaterie(Materie materie) {
-        this.materie = materie;
-    }
-
-    public int getNota() {
-        return nota;
-    }
-
-    public void setNota(int nota) {
-        this.nota = nota;
-    }
+	/**
+	 * @param nota the nota to set
+	 */
+	public void setNota(double nota) {
+		this.nota = nota;
+	}
+	
+	
 }
