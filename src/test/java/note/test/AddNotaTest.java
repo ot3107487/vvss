@@ -37,7 +37,7 @@ public class AddNotaTest {
 	public void test2() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidNrmatricol);
-		Nota nota = new Nota(10.1, "Istorie", 5);
+		Nota nota = new Nota(10, "Istorie", 5);
 		ctrl.addNota(nota);
 	}
 	

@@ -2,9 +2,8 @@ package note.repository;
 
 import java.util.List;
 
-import note.main.ClasaException;
-
 import note.model.Nota;
+import note.utils.ClasaException;
 
 public interface NoteRepository {
 	

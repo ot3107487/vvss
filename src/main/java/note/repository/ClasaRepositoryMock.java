@@ -1,17 +1,16 @@
 package note.repository;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-
-import note.main.ClasaException;
-import note.utils.Constants;
-
 import note.model.Corigent;
 import note.model.Elev;
 import note.model.Medie;
 import note.model.Nota;
+import note.utils.ClasaException;
+import note.utils.Constants;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ClasaRepositoryMock implements ClasaRepository{
 
@@ -50,10 +49,10 @@ public class ClasaRepositoryMock implements ClasaRepository{
 	}
 
 	@Override
-	public List<Medie> calculeazaMedii() throws ClasaException{
+	public List<Medie> calculeazaMedii() throws ClasaException {
 		// TODO Auto-generated method stub
 		List<Medie> medii = new LinkedList<Medie>();
-		if(clasa.size() >= 0) {
+		if(clasa.size() > 0) {
 			for(Elev elev : clasa.keySet()) {
 				Medie medie = new Medie();
 				medie.setElev(elev);
@@ -66,7 +65,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 					int nrNote = noteElev.size();
 					int i = 0;
 					double suma = 0;
-					if(nrNote >= 0) {
+					if(nrNote > 0) {
 						while(i < nrNote) {
 							double nota = noteElev.get(i);
 							suma += nota;
@@ -99,7 +98,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 	@Override
 	public List<Corigent> getCorigenti() {
 		List<Corigent> corigenti = new ArrayList<Corigent>();
-		if(clasa.size() >= 0) {
+		if(clasa.size() > 0) {
 			for(Elev elev : clasa.keySet()) {
 				Corigent corigent = new Corigent(elev.getNume(), 0);
 				for(String materie : clasa.get(elev).keySet()) {
@@ -107,7 +106,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 					int nrNote = noteElev.size();
 					int i = 0;
 					double suma = 0;
-					if(nrNote >= 0) {
+					if(nrNote > 0) {
 						while(i < nrNote) {
 							double nota = noteElev.get(i);
 							suma += nota;

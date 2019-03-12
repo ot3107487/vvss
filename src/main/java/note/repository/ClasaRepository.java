@@ -4,7 +4,7 @@ import note.model.Corigent;
 import note.model.Elev;
 import note.model.Medie;
 import note.model.Nota;
-import note.main.ClasaException;
+import note.utils.ClasaException;
 
 import java.util.HashMap;
 import java.util.List;
