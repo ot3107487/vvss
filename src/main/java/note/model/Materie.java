@@ -1,5 +1,5 @@
 package note.model;
 
 public enum Materie {
-    MATE, ROMANA
+    Mate,Romana,Istorie,Franceza,Fizica,Chimie,Engleza,Desen
 }

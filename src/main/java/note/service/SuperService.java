@@ -89,9 +89,12 @@ public class SuperService {
         return corigenti;
     }
 
-    public void addNota(int nrMatricol, String materie, int valoare) throws ClasaException {
-        Nota nota = new Nota(nrMatricol, Materie.valueOf(materie), valoare);
-        this.noteRepository.add(nota);
+    public void addNota(int nrMatricol, String materie, int nota) throws ClasaException {
+        Nota note = new Nota(nrMatricol, Materie.valueOf(materie), nota);
+        this.noteRepository.add(note);
     }
 
+    public List<Nota> getAllNote(){
+        return this.noteRepository.getAll();
+    }
 }
