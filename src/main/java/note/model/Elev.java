@@ -1,5 +1,7 @@
 package note.model;
 
+import java.util.Objects;
+
 public class Elev {
     private int nrmatricol;
     private String nume;
@@ -34,4 +36,18 @@ public class Elev {
     public void setIdClasa(int idClasa) {
         this.idClasa = idClasa;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Elev elev = (Elev) o;
+        return nrmatricol == elev.nrmatricol;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nrmatricol);
+    }
+
 }

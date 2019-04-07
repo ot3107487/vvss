@@ -44,13 +44,17 @@ public class SuperService {
         }
         for (Elev elev : situatie.keySet()) {
             Collection<Nota> noteElev = situatie.get(elev).values();
-            int suma = 0;
-            for (Nota nota : noteElev)
-                suma += nota.getNota();
-            double medie = suma / noteElev.size();
+            double medie = this.calculateMediaForElev(noteElev);
             medii.put(elev, medie);
         }
         return medii;
+    }
+
+    private double calculateMediaForElev(Collection<Nota> noteElev) {
+        double suma = 0;
+        for (Nota nota : noteElev)
+            suma += nota.getNota();
+        return suma / noteElev.size();
     }
 
     public HashMap<Elev, List<Nota>> getSituatieCorigenti() throws ClasaException {
@@ -94,7 +98,7 @@ public class SuperService {
         this.noteRepository.add(note);
     }
 
-    public List<Nota> getAllNote(){
+    public List<Nota> getAllNote() {
         return this.noteRepository.getAll();
     }
 }

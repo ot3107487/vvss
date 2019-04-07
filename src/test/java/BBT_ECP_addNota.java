@@ -1,5 +1,3 @@
-package test;
-
 import note.model.Materie;
 import note.model.Nota;
 import note.repository.ClasaRepository;
