@@ -84,9 +84,9 @@ public class SuperService {
         Comparator<Elev> comparator = (Elev e1, Elev e2) -> {
             int diff = situatia.get(e1).size() - situatia.get(e2).size();
             if (diff == 0) {
-                return e1.getNume().compareTo(e2.getNume());
+                return -e1.getNume().compareTo(e2.getNume());
             } else {
-                return diff;
+                return -diff;
             }
         };
         Collections.sort(corigenti, comparator);
