@@ -28,7 +28,7 @@ public class BBT_BVA_addNota {
 
     //invalid
     @Test
-    public void TC2_BVA() {
+    public void TC14_BVA() {
         try {
             service.addNota(0, "Romana", 10);
             assert false;
@@ -66,7 +66,7 @@ public class BBT_BVA_addNota {
 
     // valid
     @Test
-    public void TC14_BVA() throws ClasaException {
+    public void TC2_BVA() throws ClasaException {
         try {
             service.addNota(22, "Desen", 10);
             boolean found = false;
